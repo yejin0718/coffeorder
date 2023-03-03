@@ -37,4 +37,9 @@ public class Users {
 	public void update(Long point) {
 		this.point = this.point + point;
 	}
+
+	public void pay(Long point) {
+		this.point = this.point - point;
+	}
+
 }

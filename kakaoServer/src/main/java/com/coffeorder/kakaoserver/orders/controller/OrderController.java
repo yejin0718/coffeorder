@@ -33,8 +33,8 @@ public class OrderController {
 
 	@PostMapping("/order")
 	public DataResponse order(@RequestBody RequestOrder requestOrder, HttpServletRequest request) {
-		Long point = ordersService.charge(requestCharge, request);
-		return new DataResponse(CHARGE_POINT_SUCCESS_MSG, point);
+		Long leftpoint = ordersService.order(requestOrder, request);
+		return new DataResponse(ORDER_SUCCESS_MSG, leftpoint);
 	}
 
 }
