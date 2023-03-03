@@ -19,10 +19,10 @@ public class Users {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer usersId;
 
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false)
 	private String email;
 
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false)
 	private String password;
 
 	@Column(nullable = false)
@@ -32,5 +32,9 @@ public class Users {
 		this.email = email;
 		this.password = password;
 		this.point = 0L;
+	}
+
+	public void update(Long point) {
+		this.point = this.point + point;
 	}
 }
