@@ -7,6 +7,7 @@ public enum ResponseMessage {
 
 	ORDER_SUCCESS_MSG(200, "주문이 완료되었습니다"),
 	SHOW_MENU_SUCCESS_MSG(200, "메뉴 조회를 성공했습니다."),
+	SHOW_POPULAR_MENU_SUCCESS_MSG(200, "인기메뉴 조회를 성공했습니다."),
 	CHARGE_POINT_SUCCESS_MSG(200, "포인트 충전이 완료되었습니다."),
 
 	// signup

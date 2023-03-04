@@ -5,7 +5,6 @@ import static com.coffeorder.kakaoserver.common.response.ResponseMessage.*;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,6 +25,12 @@ public class MenuContorller {
 	public DataResponse showMenu() {
 		List<Menu> menuList =  menuService.showMenu();
 		return new DataResponse(SHOW_MENU_SUCCESS_MSG, menuList);
+	}
+
+	@GetMapping("/popular/list")
+	public DataResponse showPopularMenu() {
+		List<Menu> popularList = menuService.showPopularMenu();
+		return new DataResponse(SHOW_POPULAR_MENU_SUCCESS_MSG, popularList);
 	}
 
 }

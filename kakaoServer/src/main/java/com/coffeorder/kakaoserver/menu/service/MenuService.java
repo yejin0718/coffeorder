@@ -22,4 +22,9 @@ public class MenuService {
 		List<Menu> menuList = menuRepository.findAll();
 		return menuList;
 	}
+
+	@Transactional(readOnly = true)
+	public List<Menu> showPopularMenu() {
+
+	}
 }
